@@ -1,11 +1,11 @@
 -- Go back to explorer
-vim.keymap.set('n', '<leader>e', vim.cmd.Ex)
+vim.keymap.set('n', '<leader>e', function() vim.cmd('Ex') end)
 
 -- Write/save changes
-vim.keymap.set('n', '<leader>w', vim.cmd.w)
+vim.keymap.set('n', '<leader>w', function() vim.cmd('w') end)
 
 -- Quit buffer
-vim.keymap.set('n', '<leader>q', vim.cmd.q)
+vim.keymap.set('n', '<leader>q', function() vim.cmd('q') end)
 
 -- Switch ; and :
 vim.keymap.set('n', ';', ':')
