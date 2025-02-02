@@ -1,0 +1,22 @@
+services:
+  mc:
+    image: itzg/minecraft-server
+    tty: true
+    stdin_open: true
+    ports:
+      - "25565:25565"
+    environment:
+      LEVEL: "world"
+      EULA: "TRUE"
+      DIFFICULTY: "hard"
+      MAX_PLAYERS: 5
+      SNOOPER_ENABLED: false
+      SERVER_NAME: "Zerver"
+      # When autopause runs, the server sees a game 
+      # tick taking a very long time and may crash 
+      # if not disabled by setting it to -1
+      MAX_TICK_TIME: -1
+    restart: unless-stopped
+    volumes:
+      # attach the relative directory 'data' to the container's /data path
+      - ./data:/data
