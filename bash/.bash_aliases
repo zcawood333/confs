@@ -1,4 +1,5 @@
 # General
+unalias ls
 alias l='ls -alF'
 
 # Vim/Neovim
@@ -22,3 +23,9 @@ alias gd='git diff'
 alias gdc='git diff --cached'
 alias gdm='git diff --merge-base'
 
+# Docker
+alias dim='docker image'
+alias dimls='docker image ls'
+alias dimpl='docker image pull'
+alias dimps='docker image push'
+alias dimrm='docker image rm'
